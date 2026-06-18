@@ -111,14 +111,65 @@
     .btn-submit:hover{background:var(--ink-light);box-shadow:0 12px 30px rgba(26,18,11,.15);transform:translateY(-2px)}
     .trust{text-align:center;margin-top:1.25rem;font-size:.75rem;color:var(--muted)}
 
+    /* TESTIMONIALS */
+    .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2.5rem}
+    .test-card{background:var(--cream);border:1px solid rgba(26,18,11,.06);border-radius:20px;padding:2rem;display:flex;gap:1rem;align-items:flex-start;transition:all .4s}
+    .test-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,18,11,.04);border-color:rgba(196,149,106,.2)}
+    .test-card .test-img{flex-shrink:0}
+    .test-card .test-img img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);transition:transform .3s}
+    .test-card:hover .test-img img{transform:scale(1.1)}
+    .test-card .stars{color:var(--gold);font-size:.85rem;letter-spacing:.05em;margin-bottom:.3rem}
+    .test-card blockquote{font-size:.88rem;color:var(--ink-light);line-height:1.7;font-style:italic;margin-bottom:.6rem}
+    .test-card .name{font-weight:700;font-size:.85rem}
+    .test-card .title{font-size:.72rem;color:var(--muted)}
+    @media(max-width:640px){.test-card{flex-direction:column}}
+
     /* SOCIAL POSTS */
-    .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+    .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:2rem}
     .social-card{background:var(--paper);border:1px solid rgba(26,18,11,.06);border-radius:16px;overflow:hidden;transition:transform .3s}
-    .social-card:hover{transform:translateY(-4px)}
-    .social-card .s-img{width:100%;height:180px;object-fit:cover;display:block}
+    .social-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(26,18,11,.04)}
+
+    /* PHONE MOCKUPS */
+    .s-mockup{background:var(--ink);padding:1rem;display:flex;justify-content:center}
+    .mockup-phone{width:220px;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.2);font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:.7rem}
+    .m-header{display:flex;align-items:center;justify-content:space-between;padding:.4rem .6rem;background:#fafafa;color:#000;font-size:.6rem;font-weight:600}
+    .m-camera{width:8px;height:8px;border-radius:50%;background:#333}
+    .m-header .m-icons{font-size:.7rem}
+    .m-content .m-top{display:flex;align-items:center;gap:.4rem;padding:.5rem .6rem;background:#fff;color:#000}
+    .m-avatar{width:28px;height:28px;border-radius:50%;background-size:cover;background-position:center;flex-shrink:0;border:1px solid #eee}
+    .m-avatar.small{width:22px;height:22px}
+    .m-dot{color:#999;font-size:.3rem;margin:0 .2rem;vertical-align:middle}
+    .m-muted{color:#999;font-size:.6rem}
+    .m-more{color:#000;font-weight:700;margin-left:auto;font-size:1rem}
+    .m-image{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+    .m-actions{padding:.3rem .6rem;font-size:.85rem;color:#000;background:#fff;letter-spacing:.1em}
+    .m-caption{padding:.3rem .6rem .6rem;background:#fff;color:#000;font-size:.65rem;line-height:1.5}
+    .m-caption strong{color:#000}
+
+    /* TIKTOK MOCKUP */
+    .mockup-tiktok{width:180px;background:#000;border-radius:16px;overflow:hidden;color:#fff}
+    .tiktok-top{display:flex;align-items:center;gap:.5rem;padding:.6rem;position:absolute;top:0;left:0;right:0;z-index:2;background:linear-gradient(transparent 60%,rgba(0,0,0,.4))}
+    .tiktok-vid{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;filter:brightness(.7)}
+    .tiktok-overlay{position:absolute;right:.4rem;bottom:4rem;display:flex;flex-direction:column;gap:.6rem;z-index:2}
+    .t-icon{font-size:1.1rem;text-align:center;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+    .tiktok-bottom{position:absolute;left:0;right:0;bottom:0;padding:.6rem;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));z-index:2}
+    .t-caption{font-size:.58rem;line-height:1.4;color:rgba(255,255,255,.9)}
+    .mockup-tiktok .m-content{position:relative}
+
+    /* STORY MOCKUP */
+    .mockup-story{width:180px;background:#000;border-radius:16px;overflow:hidden;color:#fff}
+    .mockup-story .m-content{position:relative;aspect-ratio:9/16}
+    .story-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55)}
+    .story-header{position:absolute;top:.5rem;left:.5rem;z-index:2;display:flex;align-items:center;gap:.4rem;background:rgba(0,0,0,.2);backdrop-filter:blur(4px);padding:.25rem .5rem .25rem .25rem;border-radius:100px}
+    .story-text{position:absolute;bottom:6rem;left:.6rem;right:.6rem;z-index:2;font-size:.85rem;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,.5);line-height:1.3}
+    .story-poll{position:absolute;bottom:2.5rem;left:.6rem;right:.6rem;z-index:2;display:flex;flex-direction:column;gap:.25rem}
+    .poll-bar{font-size:.55rem;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);padding:.25rem .5rem;border-radius:100px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .story-link{position:absolute;bottom:.6rem;left:.6rem;right:.6rem;z-index:2;background:#fff;color:#000;text-align:center;padding:.35rem;border-radius:100px;font-size:.6rem;font-weight:700}
+    .t-user strong{color:#fff}
+
     .social-card .s-body{padding:1.25rem}
     .social-card .platform{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--warm);margin-bottom:.5rem}
-    .social-card .content{font-size:.88rem;color:var(--ink-light);line-height:1.7}
+    .social-card .content{font-size:.85rem;color:var(--ink-light);line-height:1.7}
     .social-card .content strong{color:var(--ink)}
 
     /* EMAIL */
@@ -321,6 +372,50 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section style="background:var(--paper);">
+    <div class="container">
+      <div class="section-label reveal">&#128172; Real Members</div>
+      <h2 class="section-title reveal">They Came Back to the Page</h2>
+      <p class="section-sub reveal">The Rewind is already bringing readers home.</p>
+      <div class="test-grid">
+        <div class="test-card reveal" style="transition-delay:.1s">
+          <div class="test-img">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Reader" loading="lazy" />
+          </div>
+          <div class="test-body">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"I hadn't stepped into my local Inkwell in over a year. The Rewind QR caught my eye at the till. One scan, one email, and I'm back to browsing every Saturday."</blockquote>
+            <div class="name">James M.</div>
+            <div class="title">Camden branch &middot; Rewind member since Nov</div>
+          </div>
+        </div>
+        <div class="test-card reveal" style="transition-delay:.2s">
+          <div class="test-img">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Reader" loading="lazy" />
+          </div>
+          <div class="test-body">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"I used to hate paper stamp cards &mdash; they'd disintegrate in my bag. The Rewind Card on my phone feels like Inkwell finally gets my generation."</blockquote>
+            <div class="name">Zara K.</div>
+            <div class="title">Shoreditch branch &middot; Rewind member since Nov</div>
+          </div>
+        </div>
+        <div class="test-card reveal" style="transition-delay:.3s">
+          <div class="test-img">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="Reader" loading="lazy" />
+          </div>
+          <div class="test-body">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"The 13 Days of Christmas emails are my favourite part of December. One book recommendation a day from a real bookseller? Yes please."</blockquote>
+            <div class="name">Tom W.</div>
+            <div class="title">Greenwich branch &middot; Rewind member since Nov</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- LAUNCH EMAIL -->
   <section style="background:var(--paper);">
     <div class="container">
@@ -346,49 +441,108 @@
     <div class="container">
       <div class="section-label reveal">&#128249; Social Posts</div>
       <h2 class="section-title reveal">Launch Content</h2>
+      <p class="section-sub reveal">3 posts. 3 platforms. One link to the Rewind.</p>
       <div class="social-grid">
 
         <div class="social-card reveal" style="transition-delay:.1s">
-          <img class="s-img" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80" alt="Stack of books" loading="lazy" />
+          <div class="s-mockup">
+            <div class="mockup-phone">
+              <div class="m-header">
+                <span class="m-camera"></span>
+                <span class="m-time">12:30</span>
+                <span class="m-icons">&#9881;</span>
+              </div>
+              <div class="m-content">
+                <div class="m-top">
+                  <div class="m-avatar" style="background-image:url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=100&q=80')"></div>
+                  <div><strong>inkwellbooks</strong><span class="m-dot">&bull;</span><span class="m-muted">Original</span></div>
+                  <span class="m-more">&#8942;</span>
+                </div>
+                <img class="m-image" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80" alt="Stack of books" loading="lazy" />
+                <div class="m-actions">&#9825; &#128172; &#10132; &#128204;</div>
+                <div class="m-caption">
+                  <strong>inkwellbooks</strong> The paper stamp card is retired. &#128221;&#128683;<br><br>
+                  Introducing the <strong>Inkwell Rewind</strong> &mdash; digital loyalty, works at all 9 branches. Scan in-store to join. First visit = double points. &#127881;<br><br>
+                  #InkwellRewind #IndieBookshop
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="s-body">
-            <div class="platform">&#9679; Instagram &middot; Launch</div>
+            <div class="platform">&#9679; Instagram Feed &middot; Launch Day</div>
             <div class="content">
-              <strong>Visual:</strong> Slow pan across well-loved paperbacks &rarr; Rewind QR card.<br><br>
-              <strong>Caption:</strong><br>
-              The paper stamp card is retired. &#128221;&#128683;<br><br>
-              Introducing the <strong>Inkwell Rewind</strong> &mdash; digital loyalty, never lost, works at all 9 branches.<br><br>
-              Scan the QR code in-store to join. First visit = double points. &#127881;<br><br>
-              #InkwellRewind #IndieBookshop
+              <strong>Format:</strong> Carousel (3 slides: books &rarr; Rewind card &rarr; branch interior)<br>
+              <strong>Link in bio:</strong> inkwellbooks.com/rewind
             </div>
           </div>
         </div>
 
         <div class="social-card reveal" style="transition-delay:.2s">
-          <img class="s-img" src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&q=80" alt="Phone with app" loading="lazy" />
+          <div class="s-mockup">
+            <div class="mockup-tiktok">
+              <div class="m-content">
+                <div class="tiktok-top">
+                  <div class="m-avatar" style="background-image:url('https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=100&q=80')"></div>
+                  <div class="t-user"><strong>@inkwellbooks</strong><span class="m-muted" style="display:block;font-size:.65rem;">32 years of paper stamps. Now it lives in your pocket.</span></div>
+                </div>
+                <img class="tiktok-vid" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400&q=80" alt="Books" loading="lazy" />
+                <div class="tiktok-overlay">
+                  <div class="t-icon">&#10084;&#65039;</div>
+                  <div class="t-icon">&#128172;</div>
+                  <div class="t-icon">&#128257;</div>
+                  <div class="t-icon">&#128259;</div>
+                </div>
+                <div class="tiktok-bottom">
+                  <div class="t-caption">
+                    POV: your local bookshop finally went digital. &#128514;<br>
+                    Scan at any branch &rarr; digital card &rarr; points &rarr; discounts &rarr; more books. #BookTok #InkwellRewind
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="s-body">
             <div class="platform">&#9679; TikTok &middot; Day 2</div>
             <div class="content">
-              <strong>Visual:</strong> Bookseller tears paper card in half &rarr; holds up phone with QR code &rarr; montage of 9 branches.<br><br>
-              <strong>Caption:</strong><br>
-              POV: your local bookshop finally went digital. &#128514;<br><br>
-              32 years of paper stamps. Now it lives in your pocket.<br><br>
-              Scan at any branch &rarr; digital card &rarr; points &rarr; discounts &rarr; more books.<br><br>
-              #BookTok #InkwellRewind
+              <strong>Format:</strong> 30-sec vertical video<br>
+              <strong>Scene 1:</strong> Bookseller tears paper card in half<br>
+              <strong>Scene 2:</strong> Holds up phone with Rewind QR code<br>
+              <strong>Scene 3:</strong> Montage of all 9 branches (warm acoustic audio)
             </div>
           </div>
         </div>
 
         <div class="social-card reveal" style="transition-delay:.3s">
-          <img class="s-img" src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca2?w=600&q=80" alt="Bookshop interior" loading="lazy" />
+          <div class="s-mockup">
+            <div class="mockup-story">
+              <div class="m-content">
+                <div class="story-header">
+                  <div class="m-avatar small" style="background-image:url('https://images.unsplash.com/photo-1491841550275-ad7854e35ca2?w=100&q=80')"></div>
+                  <span style="font-size:.7rem;font-weight:600;">inkwellbooks</span>
+                  <span class="m-muted" style="font-size:.6rem;">1h</span>
+                </div>
+                <img class="story-bg" src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca2?w=400&q=80" alt="Branch" loading="lazy" />
+                <div class="story-text">
+                  "Which Inkwell branch are you?"<br>
+                  <span style="font-size:.65rem;">Swipe up to find out &rarr;</span>
+                </div>
+                <div class="story-poll">
+                  <div class="poll-bar">&#128049; The original (Camden) &mdash; 42%</div>
+                  <div class="poll-bar">&#9749; The newest (Clapham) &mdash; 35%</div>
+                  <div class="poll-bar">&#128065; The hidden (Greenwich) &mdash; 23%</div>
+                </div>
+                <div class="story-link">See your Rewind Card &rarr;</div>
+              </div>
+            </div>
+          </div>
           <div class="s-body">
             <div class="platform">&#9679; Instagram Stories &middot; Week 1</div>
             <div class="content">
-              <strong>Visual:</strong> "Which Inkwell Branch Are You?" quiz.<br><br>
-              <strong>Slides:</strong><br>
-              1. "The original. High ceilings, creaky floors, a cat named Bronte. &#128049;"<br>
-              2. "Newest. Floor-to-ceiling windows, coffee bar, kids' corner. &#9749;"<br>
-              3. "The hidden one. Tucked down an alley. You have to know it. &#128065;"<br><br>
-              <strong>Sticker:</strong> QR link to Rewind sign-up.
+              <strong>Format:</strong> 4-slide quiz with poll stickers<br>
+              <strong>Slide 1:</strong> "The original. High ceilings, a cat named Bronte. &#128049;"<br>
+              <strong>Slide 2:</strong> "Newest. Floor-to-ceiling windows, coffee bar. &#9749;"<br>
+              <strong>Slide 3:</strong> "The hidden one. Tucked down a Greenwich alley. &#128065;"<br>
+              <strong>Sticker:</strong> Link to Rewind sign-up
             </div>
           </div>
         </div>
